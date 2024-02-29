@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.Contracts;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -67,6 +68,56 @@ namespace CalculadoraTI20N
             }
         }//Fim do Dividir
 
+        public string Tabuada() 
+        {
+            string resultado = "";
 
+            resultado += "Tabuada de " + ConsultarNum1;
+            for (int i = 0; i <= 10; i++) 
+            {
+
+                resultado += "\n" + ConsultarNum1 + " * " + i + " = " + (ConsultarNum1 * i); 
+                
+
+
+            }//Fim do Método For
+
+            resultado += "\n\nTabuada de " + ConsultarNum2;
+            for (int i = 0; i <= 10; i++)
+            {
+
+                resultado += "\n" + ConsultarNum2 + " * " + i + " = " + (ConsultarNum2 * i);
+
+
+
+            }//Fim do Método For
+
+            return resultado;
+            
+        
+        }//Fim do Método Tabuada
+
+        public string Raiz() 
+        {
+
+            string resultado = "";
+
+            resultado = "A raiz de " + ConsultarNum1 + " é: " + Math.Sqrt(ConsultarNum1) +
+                        "\nA raiz de " + ConsultarNum2 + " é: " + Math.Sqrt(ConsultarNum2);
+
+            return resultado;
+        }//Fim do Raiz
+
+        public double Potencia() 
+        {
+
+
+
+
+            return Math.Pow(ConsultarNum1, ConsultarNum2);
+        }//Fim do Potencia
+
+
+        
     }//Fim da Classe
-}//Fim do projeto
+}//Fim do Projeto
